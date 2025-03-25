@@ -110,8 +110,6 @@ Import the project via Git:
 
 File > Import > Git > Projects from Git > Clone URI
 
-Repository URL: https://github.com/shashirajraja/shopping-cart.git
-
 Select the master branch and finish the import.
 
 Update application.properties:
