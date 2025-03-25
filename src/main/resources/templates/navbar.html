@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="site-header" class="fixed-top">
+		
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1 class="p-3" ><a th:href="@{/}">Navbar</a></h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+  <!-- left side -->
+  <div class="navbar-nav mr-auto">
+  	<h4>
+			<a th:href="@{/addProduct}" th:if="${username=='admin@gmail.com'}">
+				Add Product</a>
+		</h4>
+  </div>
+   
+    
+    <h3 class="p-2" ><a th:href="@{/public/dashboard}"  th:if="${username!=null}">Profile</a> </h3>
+    <h3 class="p-2"><a  th:if="${username!=null}" th:href="@{/orders}">Cart</a> </h3>
+    <h3 class="p-2"><a  th:if="${username!=null}" th:href="@{/logout}">Logout</a></h3>
+    <h3 class="p-2"  th:if="${username==null}" ><a th:href="@{/login}">Login </a></h3>
+    <h3 class="p-2"  th:if="${username==null}"><a th:href="@{/public/register}">Signup</a> </h3>
+    
+  </div>
+</nav>
+	
+	</header>
+	<!-- //header -->
+</body>
+
+</html>
