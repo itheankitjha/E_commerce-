@@ -1,140 +1,180 @@
-# E_commerce-
-This is an E-Commerce Website build for selling of any electronics products online.
+Online Shopping Cart (E-Commerce Website)
 
-About
-In this projects a user can visit the websites, registers and login to the website. They can check all the products available for shopping, filter and search item based on different categories, and then add to cart. They can add multiple item to the cart and also plus or minus the quantity in the cart. Once the cart is updated, the user can proceed to checkout and click the credit card payment details to proceed. Once the payment is success the orders will be placed and users will be able to see the orders details in the orders section along with the shipping status of the product.
+📹 Introduction & Demo
 
-The admin also plays an important role for this project as the admin is the one responsible for adding any product to the store, updating the items, removing the item from the store as well as managing the inventory. The admin can see all the product orders placed and also can mark them as shipped or delivered based on the conditions.
+Watch the full project introduction, demo, and setup guide.
 
-One of the best functionality that the projects include is mailing the customers, so once a user registers to the website, they will recieve a mail for the successful registration to the website, and along with that whenever a user orders any product or the product got shipped from the store, then the user will also receive the email for its confirmation. Sometimes, if the user tried to add any item which is out of stock, them they will get an email one the item is available again the stock.
+This is an E-Commerce Website built for selling electronics products online.
 
-Note: The payment page is created only for demo purpose and its not fully integrated with any payment gateway. So for now any credit card details will be accepted and the demo orders will be placed.
+📖 About the Project
 
-Highlights :--
-The users will get a mail to their registered mail Id during:-
-New User Registration
-Order Successfully Placed
-The Item was out of stock while exploring but now it got available in the store
-Successful shipment and delivery of the Item
-Technologies used:-
+This project allows users to:
+
+Browse & Search: Explore available products, filter by categories, and search for specific items.
+
+User Authentication: Register and log in to manage shopping activities.
+
+Shopping Cart: Add, remove, and update product quantities in the cart.
+
+Checkout: Simulate payment and place orders (for demo purposes).
+
+Order Tracking: View order details and track shipping status.
+
+🛠️ Admin Features:
+
+Add, update, and delete products.
+
+Manage inventory.
+
+Track and update order statuses (e.g., shipped, delivered).
+
+📧 Email Notifications:
+
+Users will receive email notifications for:
+
+Successful registration.
+
+Order placement confirmation.
+
+Product availability (if previously out of stock).
+
+Shipment and delivery updates.
+
+Note: Payment integration is for demo purposes. Any credit card details will be accepted without real payment processing.
+
+📊 Tech Stack
+
 Front-End Development:
-HTML
-CSS
-Javascript
-BootStrap
+
+CSS (86.4%)
+
+Java (7.2%)
+
+HTML (6.2%)
+
+JavaScript (0.2%)
+
 Back-End Development:
-Java [JDK 8+]
+
+Java (JDK 8+)
+
 JDBC
+
 Servlet
+
 JSP
+
 Database:
-MySql
-================ Software And Tools Required ================
-: Git [https://www.youtube.com/watch?v=gv7VPQ4LZ7g]
-: Java JDK 8+ [https://www.youtube.com/watch?v=O9PWH9SeTTE]
-: Eclipse EE (Enterprise Edition) [https://www.youtube.com/watch?v=8aDsEV7txXE]
-: Apache Maven [https://www.youtube.com/watch?v=jd2zx3dLjuw]
-: Tomcat v8.0+ [https://youtu.be/mLFPodZO8Iw?t=903]
-: MySQL Server [https://www.youtube.com/watch?v=Ydh5jYA6Frs]
-: MySQL Workbench [https://www.youtube.com/watch?v=t79oCeTXHwg]
-================= Dummy Database Initialization =================
-STEP 1: Open MySQL Command Prompt or MySQL Workbench
 
-STEP 2: Login to the administrator user of MySql: mysql -u <username> -p (Enter Password if asked)
+MySQL
 
-STEP 3: Copy paste and execute the MySQL Query from the following file:-
+💻 Software & Tools Required
 
-Run the Sql Query From this file: databases/mysql_query.sql
-======GENERATING GMAIL APP PASSWORD [For Mailing Functionalities]========
-Step 1: Create a gmail account or login to existing account in any browser
+Git
 
-Step 2 : Go to https://myaccount.google.com/security and check if 2 step verifications is enabled or not, enable it if not enabled
+Java JDK 8+
 
-Step 3: Go to https://myaccount.google.com/apppasswords and enter password if asked
+Eclipse EE (Enterprise Edition)
 
-Step 4: In Select an App Section: select Other (custom name) => enter "Ellison Electronics" => Generate
+Apache Maven
 
-Step 5: After that it will generate 16 digits app password which you need to copy and save for future configurations.
+Tomcat v8.0+
 
-Step 6: Done : Now continue to importing the project. [Don't share the above password generated to anyone]
+MySQL Server
 
-========== Importing and Running The Project Through Eclipse EE ==========
-Step 1: Open Eclipse Enterprise Edition. [Install, if not already installed.]
+MySQL Workbench
 
-Step 2: Click On File > Import > Git > Projects From Git > Clone Uri > Paste The Repository Url as: https://github.com/shashirajraja/shopping-cart.git> Select master Branch > Next > Next > Finish.
+🗂️ Dummy Database Initialization
 
-Step 3: Go inside Java Resources > src > application.properties and update the values as below:
+Open MySQL Command Prompt or MySQL Workbench.
 
-a) Update value for db.username and db.password according to your installed mysql credentials.
-b) Update value for mailer.email and mailer.password, with the same email and app password that you generated earlier in above section [ NOTE:Actual gmail password will not work]
-Step 4: Right Click on Project > Run as > Maven Build > In the goals field enter "clean install" > apply > run
+Login as admin: mysql -u <username> -p
 
-Step 5: Right Click On Project > Build Path > Configure Build Path > Libraries > Remove and Update Any Libraries if Red Mark Exists > Finish.
+Execute the SQL script from databases/mysql_query.sql.
 
-Step 6: Right Click on Project > maven > update project > select force update > apply > close
+📧 Configuring Gmail for Mailing
 
-Step 7: Tomcat Configurations:
+Ensure 2-Step Verification is enabled on your Gmail account.
 
-If Tomcat Server is not configured in Eclipse :
+Generate an App Password:
 
-Right Click On Project > Run As > Run On Server > Manually Define a new server > Select server type > select Tomcat v8.0+ > (Select Tomcat V8.0+ Installation Location If Asked) > Next > Add the current project > Finish.
-Else If Tomcat Server is already configured in Eclipse:
+Select Other (Custom Name): Enter "Ellison Electronics".
 
-Right Click On Project > Run As > Run On Server > Select Tomcat Version > Next > Add the project > Finish.
-or
+Copy the 16-digit password for later use.
 
-You can directly goto server tab, select the tomcat server and use the debug or run button to start the previously ran project
-Step 8: Check Running The Site At http://localhost:8080/shopping-cart/
+🚀 Importing & Running the Project
 
-Step 9: [To Change the Port, if getting error like 'port already in use'] Open The Server Tab > Double Click On Tomcat Server > Ports > Change The Port Number For Http/1.1 To 8083 > Close And Save. Now Start and you can access the project on http://localhost:8083/shopping-cart/
+Open Eclipse EE.
 
-Step 10: Default Username And Password For Admin Is "admin@gmail.com" And "admin"
+Import the project via Git:
 
-Step 11: The default Username And Password For User Is "guest@gmail.com" And "guest"
+File > Import > Git > Projects from Git > Clone URI
 
-FAQ
-Question:1 Unable to Connect to Database?
+Repository URL: https://github.com/shashirajraja/shopping-cart.git
 
-Answer: Please check you have installed the mysql correctly and have updated the correct db details in application.properties file. Also you can try doing maven clean install and force update the project and restart.
+Select the master branch and finish the import.
 
-Note:- This is a Sample Project for learning purpose, we have not much considered of web security.
+Update application.properties:
 
-Some Screenshots for the project:
-Home Page image
+Set db.username and db.password for MySQL.
 
-Login Page image
+Set mailer.email and mailer.password using your Gmail and App Password.
 
-Register Page image
+Build the project:
 
-Category Wise Product Filter image
+Right-click project > Run As > Maven Build
 
-Cart Items image
+Enter goal: clean install > Apply > Run.
 
-Credit Card Payment image
+Resolve dependencies (if needed):
 
-Order Details & Status image
+Right-click project > Maven > Update Project (select Force Update).
 
-User Profile image
+Configure Tomcat Server:
 
-Admin Home image
+If Tomcat is NOT configured:
 
-Stock Items image
+Run As > Run on Server > Define new server.
 
-Shipped Items image
+Select Tomcat v8.0+ and add the project.
 
-Recent Orders yet to be shipped image
+If Tomcat is already configured:
 
-Add Product to the stock image
+Use the Server tab to run/debug the project.
 
-Remove Product from the stock image
+Access the project:
 
-Update the stock item image
+Default URL: http://localhost:8080/shopping-cart/
 
-Sample Email for order placed
+Change port (if needed):
 
-image
-Class Diagram
-image
-"Suggestions and project improvement ideas are welcomed!"
-Thanks a lot,
-Project Leader
+Open the Server tab.
+
+Double-click Tomcat Server > Ports.
+
+Update the port to 8083, then save and restart.
+
+🔑 Default Credentials
+
+Admin: admin@gmail.com / admin
+
+User: guest@gmail.com / guest
+
+❓ FAQ
+
+1. Unable to Connect to Database?
+
+Ensure MySQL is installed correctly.
+
+Verify database credentials in application.properties.
+
+Run maven clean install and Force Update the project.
+
+Restart Eclipse and Tomcat.
+
+2. Payment Gateway Issues?
+
+This project uses a mock payment system for demo purposes.
+
+Feel free to raise issues or contribute to this project on GitHub.
+
